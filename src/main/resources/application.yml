@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    master:
+      driver-class-name: org.postgresql.Driver
+      jdbc-url: jdbc:postgresql://localhost:54321/docker_db
+      username: test
+      password: test
+    slave:
+      driver-class-name: org.postgresql.Driver
+      jdbc-url: jdbc:postgresql://localhost:54322/docker_db
+      username: test
+      password: test
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create-drop
